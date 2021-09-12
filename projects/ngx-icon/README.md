@@ -1,24 +1,40 @@
-# NgxIcon
+# ngx-icon
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+An Angular service that can dynamically change the tab icon.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name --project ngx-icon` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-icon`.
-> Note: Don't forget to add `--project ngx-icon` or else it will be added to the default project in your `angular.json` file. 
+Import this module:
 
-## Build
+```ts
+import { NgModule } from '@angular/core';
 
-Run `ng build ngx-icon` to build the project. The build artifacts will be stored in the `dist/` directory.
+import { NgxIconModule } from 'ngx-icon';
 
-## Publishing
+@NgModule({
+  imports: [
+    //other imports
+    NgxIconModule,
+  ],
+  ...
+})
+export class AppModule {}
+```
 
-After building your library with `ng build ngx-icon`, go to the dist folder `cd dist/ngx-icon` and run `npm publish`.
+```ts
+import { Component } from '@angular/core';
+import { NgxIconService } from 'ngx-icon';
 
-## Running unit tests
-
-Run `ng test ngx-icon` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@Component({
+  selector: 'app-root',
+  template: ``,
+  styles: [],
+})
+export class AppComponent {
+  constructor(private iconService: NgxIconService) {
+    this.iconService.setIcon(`
+      whatever. Relative to the index.html.
+    `);
+  }
+}
+```

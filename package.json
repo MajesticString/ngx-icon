@@ -1,6 +1,13 @@
 {
   "name": "ngx-icon",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MajesticString/ngx-icon.git"
+  },
+  "homepage": "https://github.com/MajesticString/ngx-icon#readme",
+  "author": "Harry Allen",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
