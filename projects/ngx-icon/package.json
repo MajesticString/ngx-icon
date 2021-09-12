@@ -1,6 +1,13 @@
 {
   "name": "ngx-icon",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "keywords": [
+    "icon",
+    "angular",
+    "change",
+    "change icon angular",
+    "ng icon"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MajesticString/ngx-icon.git"
